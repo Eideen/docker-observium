@@ -86,7 +86,7 @@ Environment variables
 | `SVN_USER`          | N/A              |
 | `SVN_PASS`          | N/A              |
 | `SVN_REPO`          | N/A              |
-
+| `TZ`                | Europe/London    |
 
 If you don't have a subscription but run your own managed copy, feel free to
 sub-in your own repo.

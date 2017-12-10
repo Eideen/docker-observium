@@ -50,6 +50,7 @@ ENV USE_SVN false
 ENV SVN_USER ''
 ENV SVN_PASS ''
 ENV SVN_REPO ''
+ENV TZ 'Europe/london'
 
 # Avoid any interactive prompting
 ENV DEBIAN_FRONTEND noninteractive
@@ -150,3 +151,8 @@ COPY cron.d /etc/cron.d/
 # === phusion/baseimage post-work
 # Clean up APT when done
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+#set timezone 
+#List of TZ names: en.wikipedia.org/wiki/List_of_tz_database_time_zones
+#https://serverfault.com/questions/683605/docker-container-time-timezone-will-not-reflect-changes
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone

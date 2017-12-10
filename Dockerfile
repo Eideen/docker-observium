@@ -50,7 +50,7 @@ ENV USE_SVN false
 ENV SVN_USER ''
 ENV SVN_PASS ''
 ENV SVN_REPO ''
-ENV TZ 'Europe/london'
+ENV      TZ 'Europe/London'
 
 # Avoid any interactive prompting
 ENV DEBIAN_FRONTEND noninteractive
